@@ -1,10 +1,14 @@
 import React from "react";
 
-function TodoItem({ todo, onToggle, onDelete }) {
+function TodoItem({ todo, onDelete }) {
   return (
-    <li className={todo.completed ? "completed" : ""}>
-      <span onClick={() => onToggle(todo._id)}>{todo.text}</span>
-      <button onClick={() => onDelete(todo._id)}>❌</button>
+    <li className="todo-item">
+      <span className="todo-text">{todo.text}</span>
+      <button onClick={() => onDelete(todo._id)} className="delete-btn">
+        ❌
+      </button>
     </li>
   );
 }
+
+export default TodoItem;
