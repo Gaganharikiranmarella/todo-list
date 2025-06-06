@@ -22,5 +22,3 @@ function TodoForm({ onAdd }) {
     </form>
   );
 }
-
-export default TodoForm;
